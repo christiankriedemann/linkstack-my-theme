@@ -3,73 +3,84 @@
 
 /* Basis-Typografie Verbesserungen */
 body {
-    font-size: 16px !important;
-    line-height: 1.6 !important;
-    letter-spacing: 0.02em;
+    font-size: 18px !important;
+    line-height: 1.65 !important;
+    letter-spacing: 0.01em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 /* Hauptüberschrift Optimierung */
 h1 {
-    font-size: 32px !important;
+    font-size: 36px !important;
     line-height: 1.3 !important;
     font-weight: 700 !important;
-    margin-bottom: 8px !important;
+    margin-bottom: 12px !important;
     letter-spacing: -0.01em;
 }
 
 /* Untertitel/Tagline Styling */
-h2, .tagline, .subtitle {
-    font-size: 18px !important;
+h2,
+.tagline,
+.subtitle {
+    font-size: 20px !important;
     line-height: 1.5 !important;
     font-weight: 600 !important;
     margin-top: 0 !important;
-    margin-bottom: 24px !important;
+    margin-bottom: 28px !important;
     opacity: 0.9;
 }
 
-/* Beschreibungstext Container */
-.description-container, .bio-container, p {
-    max-width: 500px;
+/* Beschreibungstext Container - Zentriert ohne Einrückung */
+.description-container,
+.bio-container,
+p {
+    max-width: 520px;
     margin: 0 auto 32px auto !important;
-    padding: 0 20px;
-    text-align: left !important;
+    padding: 0;
+    text-align: center !important;
 }
 
 /* Hauptbeschreibungstext */
-.description-text, .bio-text, p {
-    font-size: 15px !important;
-    line-height: 1.7 !important;
+.description-text,
+.bio-text,
+p {
+    font-size: 17px !important;
+    line-height: 1.75 !important;
     font-weight: 400 !important;
     color: inherit;
     opacity: 0.95;
 }
 
-/* Bullet Points Optimierung */
-ul, .bullet-list {
+/* Bullet Points Container - Gleiche Breite wie Text oben */
+ul,
+.bullet-list {
     list-style: none !important;
     padding-left: 0 !important;
-    margin: 20px 0 !important;
+    margin: 24px auto !important;
     text-align: left !important;
+    max-width: 520px;
 }
 
-ul li, .bullet-item {
+/* Bullet Points Items */
+ul li,
+.bullet-item {
     position: relative;
-    padding-left: 28px !important;
-    margin-bottom: 14px !important;
-    font-size: 14.5px !important;
-    line-height: 1.6 !important;
+    padding-left: 32px !important;
+    margin-bottom: 16px !important;
+    font-size: 16px !important;
+    line-height: 1.65 !important;
     font-weight: 400 !important;
 }
 
-/* Custom Bullet Points */
-ul li::before, .bullet-item::before {
+/* Custom Bullet Points - Pfeil Icons */
+ul li::before,
+.bullet-item::before {
     content: "→" !important;
     position: absolute;
-    left: 0;
+    left: 8px;
     top: 0;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     opacity: 0.7;
 }
@@ -77,74 +88,91 @@ ul li::before, .bullet-item::before {
 /* Alternative: Runde Bullet Points */
 ul.round-bullets li::before {
     content: "•" !important;
-    font-size: 20px;
+    font-size: 22px;
     top: -2px;
 }
 
 /* Checkmark Bullet Points für Features */
 ul.feature-list li::before {
     content: "✓" !important;
-    color: #4CAF50;
+    color: #4caf50;
     font-weight: bold;
 }
 
-/* Responsive Anpassungen */
+/* Responsive Anpassungen für größere Bildschirme */
 @media (min-width: 550px) {
     h1 {
-        font-size: 38px !important;
-        margin-bottom: 12px !important;
-    }
-
-    h2, .tagline, .subtitle {
-        font-size: 20px !important;
-        margin-bottom: 28px !important;
-    }
-
-    .description-text, .bio-text, p {
-        font-size: 16px !important;
-        line-height: 1.75 !important;
-    }
-
-    ul li, .bullet-item {
-        font-size: 15px !important;
+        font-size: 42px !important;
         margin-bottom: 16px !important;
+    }
+
+    h2,
+    .tagline,
+    .subtitle {
+        font-size: 22px !important;
+        margin-bottom: 32px !important;
+    }
+
+    .description-text,
+    .bio-text,
+    p {
+        font-size: 18px !important;
+        line-height: 1.8 !important;
+    }
+
+    ul li,
+    .bullet-item {
+        font-size: 17px !important;
+        margin-bottom: 18px !important;
     }
 }
 
 /* Dark Mode Optimierungen */
 @media (prefers-color-scheme: dark) {
-    .description-text, .bio-text, p {
+    .description-text,
+    .bio-text,
+    p {
         color: #e8e8e8 !important;
     }
 
-    ul li, .bullet-item {
+    ul li,
+    .bullet-item {
         color: #d8d8d8 !important;
     }
 
-    ul li::before, .bullet-item::before {
+    ul li::before,
+    .bullet-item::before {
         color: #6b9eff !important;
     }
 
-    h2, .tagline, .subtitle {
+    h2,
+    .tagline,
+    .subtitle {
         color: #f0f0f0 !important;
     }
 }
 
 /* Light Mode Optimierungen */
 @media (prefers-color-scheme: light) {
-    .description-text, .bio-text, p {
+    .description-text,
+    .bio-text,
+    p {
         color: #333333 !important;
     }
 
-    ul li, .bullet-item {
+    ul li,
+    .bullet-item {
         color: #444444 !important;
     }
 
-    ul li::before, .bullet-item::before {
+    ul li::before,
+    .bullet-item::before {
         color: #0066cc !important;
     }
 
-    h2, .tagline, .subtitle {
+    h2,
+    .tagline,
+    .subtitle {
         color: #1a1a1a !important;
     }
 }
@@ -155,15 +183,19 @@ ul.feature-list li::before {
 }
 
 /* Profilbild Abstände optimieren */
-.avatar, .profile-picture, img[src*="avatar"] {
-    margin-bottom: 20px !important;
+.avatar,
+.profile-picture,
+img[src*="avatar"] {
+    margin-bottom: 24px !important;
 }
 
 /* Button Abstände anpassen */
-.button, button, a.button {
+.button,
+button,
+a.button {
     margin-top: 8px !important;
     margin-bottom: 12px !important;
-    font-size: 15px !important;
+    font-size: 16px !important;
     font-weight: 500 !important;
     letter-spacing: 0.01em;
 }
@@ -173,48 +205,84 @@ ul.feature-list li::before {
 .bio-container + .button,
 p + .button,
 ul + .button {
-    margin-top: 32px !important;
+    margin-top: 36px !important;
 }
 
 /* Footer Links Abstände */
-.footer-links, .credit-footer {
+.footer-links,
+.credit-footer {
     margin-top: 48px !important;
     font-size: 14px !important;
 }
 
 /* Micro-Interaktionen */
-a, .button, button {
+a,
+.button,
+button {
     transition: all 0.2s ease;
 }
 
 /* Verbesserte Lesbarkeit durch sanfte Schatten im Light Mode */
 @media (prefers-color-scheme: light) {
     .container {
-        filter: drop-shadow(0 1px 3px rgba(0,0,0,0.05));
+        filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.05));
     }
 }
 
 /* Fokus-Stile für bessere Zugänglichkeit */
-a:focus, button:focus, .button:focus {
-    outline: 2px solid #0085FF;
+a:focus,
+button:focus,
+.button:focus {
+    outline: 2px solid #0085ff;
     outline-offset: 2px;
 }
 
 /* Optimierung für sehr kleine Bildschirme */
 @media (max-width: 400px) {
-    .description-container, .bio-container, p {
-        padding: 0 15px;
+    body {
+        font-size: 16px !important;
     }
 
-    ul li, .bullet-item {
-        padding-left: 24px !important;
-        font-size: 14px !important;
+    h1 {
+        font-size: 32px !important;
+    }
+
+    h2,
+    .tagline,
+    .subtitle {
+        font-size: 18px !important;
+    }
+
+    .description-text,
+    .bio-text,
+    p {
+        font-size: 15px !important;
+    }
+
+    ul,
+    .bullet-list {
+        max-width: 92%;
+    }
+
+    ul li,
+    .bullet-item {
+        padding-left: 28px !important;
+        font-size: 15px !important;
+        margin-bottom: 14px !important;
+    }
+
+    ul li::before,
+    .bullet-item::before {
+        left: 4px;
+        font-size: 16px;
     }
 }
 
 /* Sanftere Übergänge für Dark/Light Mode Wechsel */
 * {
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
 /* Verbesserte Textauswahl */
