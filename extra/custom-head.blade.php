@@ -1,4 +1,4 @@
-{{-- 
+{{--
 
 
 |--------------------------------------------------------------------------
@@ -10,7 +10,7 @@ Custom assets can be any file you would like to use in your theme.
 For example: JS, CSS or image files.
 
 You can load these custom assets with a built-in function, 'themeAsset()'.
-Add the file you want to add to your 'custom-assets' folder, and include the name with the file extension in the function.
+Add the file you want to add to your 'custom-assets' folder, and include the name with the file extension in the function.
 
 Down below, you can find a few examples using this function:
 
@@ -20,3 +20,5 @@ Down below, you can find a few examples using this function:
 
 --}}
 
+<!-- Typography Enhancement CSS für verbesserte Lesbarkeit -->
+<link rel="stylesheet" href="{{themeAsset('typography-enhancement.css')}}">
